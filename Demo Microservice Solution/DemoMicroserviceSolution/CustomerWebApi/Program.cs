@@ -1,3 +1,4 @@
+using CustomerWebApi;
 using Microsoft.EntityFrameworkCore;
 using System.Data.Common;
 
@@ -15,7 +16,7 @@ var dbPassword = "Hanrahan1";
 var connectionString = $"Data Source={dbHost}; Initial Catalog={dbName}; User ID=sa; Password={dbPassword}";
 
 
-builder.Services.AddDbContext<CustomerDbContext>(opt => opt.UseSqlServer(connectionString));
+builder.Services.AddDbContext<CustomerDBContext>(opt => opt.UseSqlServer(connectionString));
 
 
 //Database context dependecny injection above
