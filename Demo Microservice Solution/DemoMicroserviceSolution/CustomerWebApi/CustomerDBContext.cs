@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using CustomerWebApi.Models;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Storage;
 
@@ -28,9 +29,12 @@ namespace CustomerWebApi
                 Console.WriteLine(ex.Message.ToString());
             }
 
-
-
         }
+
+
+
+
+        public DbSet<Customer> Customers { get; set; }
 
 
 
